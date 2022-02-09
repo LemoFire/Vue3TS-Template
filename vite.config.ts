@@ -17,4 +17,13 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  server: {
+    host: "0.0.0.0",
+    proxy: {
+      "/path": {
+        target: "https://domain",
+        changeOrigin: true,
+      },
+    },
+  },
 });
