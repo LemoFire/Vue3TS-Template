@@ -5,6 +5,7 @@ This template should help get you started developing with Vue 3 in Vite.
 ## 开启的功能
 
 - [x] [reactivity-transform](https://vuejs.org/guide/extras/reactivity-transform.html)
+- [x] 按需自动导入 API 插件：[unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
 
 ## 开发要求
 

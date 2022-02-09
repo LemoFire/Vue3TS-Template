@@ -35,6 +35,7 @@
     "prettier": "^2.5.1",
     "start-server-and-test": "^1.14.0",
     "typescript": "~4.5.5",
+    "unplugin-auto-import": "^0.5.11",
     "vite": "^2.7.13",
     "vitest": "^0.2.5",
     "vue-tsc": "^0.31.1"
