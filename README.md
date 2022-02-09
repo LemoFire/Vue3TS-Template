@@ -14,8 +14,17 @@ This template should help get you started developing with Vue 3 in Vite.
 #### 编辑器和插件
 
 - [VSCode](https://code.visualstudio.com/)
+
+##### VSCode 插件
+
+###### Vue
+
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) ( 禁用 Vetur )
 - [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin)
+
+###### 代码格式化工具
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 #### 包管理工具
 
