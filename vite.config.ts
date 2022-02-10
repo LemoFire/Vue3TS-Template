@@ -5,6 +5,7 @@ import vue from "@vitejs/plugin-vue";
 import styleImport, { VantResolve } from "vite-plugin-style-import";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import AutoImport from "unplugin-auto-import/vite";
+import legacy from "@vitejs/plugin-legacy";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,10 @@ export default defineConfig({
     vueJsx(),
     styleImport({
       resolves: [VantResolve()],
+    }),
+    legacy({
+      targets: ["> 0.5%, last 5 versions, iOS >= 10,Chrome >= 70"],
+      modernPolyfills: true,
     }),
     AutoImport({
       /* options */
