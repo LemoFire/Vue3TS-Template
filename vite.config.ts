@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from "url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import styleImport, { VantResolve } from "vite-plugin-style-import";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import AutoImport from "unplugin-auto-import/vite";
 
@@ -12,6 +13,9 @@ export default defineConfig({
       reactivityTransform: true,
     }),
     vueJsx(),
+    styleImport({
+      resolves: [VantResolve()],
+    }),
     AutoImport({
       /* options */
       // targets to transform
