@@ -30,6 +30,11 @@ This template should help get you started developing with Vue 3 in Vite.
 
 - [pnpm](https://pnpm.io/)
 
+#### 其他
+
+- import 代码时，使用完整相对路径，不实用`@` ，避免升级/更换脚手架时出现兼容性问题
+- 代码风格参照 [Style Guide](https://vuejs.org/style-guide/)
+
 ## Type Support for `.vue` Imports in TS
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.

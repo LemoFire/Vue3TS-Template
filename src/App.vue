@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
-import { XToast } from "./utils";
-const a = XToast({ duration: 30000, forbidClick: true });
-setTimeout(() => {
-  a.clear();
-}, 3000);
 </script>
 
 <template>
