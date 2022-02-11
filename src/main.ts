@@ -16,4 +16,11 @@ app.use(router);
 app.mount("#app");
 
 import eruda from "eruda";
-IS_DEVELOPMENT ? eruda.init() : false;
+import { version as vueVersion } from "vue/package.json";
+
+IS_DEVELOPMENT
+  ? (() => {
+      eruda.init();
+      console.log("Vue版本：", vueVersion);
+    })()
+  : false;
