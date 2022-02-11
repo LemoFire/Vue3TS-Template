@@ -1,11 +1,13 @@
 # XFVue3-TS
 
-This template should help get you started developing with Vue 3 in Vite.
+讯飞 Vue3+Vite+TypeScript 快速开发模板
+
+_main 分支为基本分支，不带任何业务逻辑。业务逻辑可在对应分支进行开发，main 分支的提交通过 pull request 再同步到各业务模板对应分支_
 
 ## 开启的功能
 
-- [x] [reactivity-transform](https://vuejs.org/guide/extras/reactivity-transform.html)
-- [x] 按需自动导入 API 插件：[unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
+- [x] ref suger：[reactivity-transform](https://vuejs.org/guide/extras/reactivity-transform.html)
+- [x] 按需自动导入 API：[unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
 
 ## 开发要求
 
@@ -14,67 +16,48 @@ This template should help get you started developing with Vue 3 in Vite.
 #### 编辑器和插件
 
 - [VSCode](https://code.visualstudio.com/)
-
-##### VSCode 插件
-
-###### Vue
-
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) ( 禁用 Vetur )
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) ( 请禁用 Vetur 再安装 )
 - [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin)
-
-###### 代码格式化工具
-
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-#### 包管理工具
-
 - [pnpm](https://pnpm.io/)
 
 #### 其他
 
 - import 代码时，使用完整相对路径，不实用`@` ，避免升级/更换脚手架时出现兼容性问题
-- 代码风格参照 [Style Guide](https://vuejs.org/style-guide/)
 
-## Type Support for `.vue` Imports in TS
+## 可参考文档
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [Vue3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [pinia](https://pinia.vuejs.org)
+- [TypeScript](https://zhuanlan.zhihu.com/p/405982472)
+- [代码风格](https://vuejs.org/style-guide/)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## 项目安装
 
 ```sh
-pnpm install
+pnpm i
 ```
 
-### Compile and Hot-Reload for Development
+### 开发环境
 
 ```sh
 pnpm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### 打包
 
 ```sh
 pnpm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### 单元测试 [Vitest](https://vitest.dev/)
 
 ```sh
 pnpm run test:unit
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+### 端到端测试 [Cypress](https://www.cypress.io/)
 
 ```sh
 pnpm run build
