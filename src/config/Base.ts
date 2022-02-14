@@ -1,1 +1,1 @@
-export const OPEN_CONSOLE: boolean = true;
+export const OPEN_CONSOLE = true;

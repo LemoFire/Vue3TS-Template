@@ -11,9 +11,12 @@ import {
 const DESC_LOADING = "请稍候...";
 
 const baseRequest = new RequestAxios();
+/* eslint-disable */
 type params = {
   [key: string]: any;
 };
+/* eslint-enable */
+
 import type { AxiosRequestConfig } from "axios/index";
 type requestContentType = "application/json" | "x-www-form-urlencoded" | string;
 type requestOptions = {
@@ -32,6 +35,7 @@ export const XRequest = {
   ) => {
     options.useLoading ? showLoading() : false;
     let isError = false;
+    // eslint-disable-next-line
     let errorContainer: any = {};
     try {
       const res = await baseRequest.request(axiosConfig);
@@ -54,6 +58,7 @@ export const XRequest = {
     options = extend(getDefaultOptions(), options);
     options.useLoading ? showLoading() : false;
     let isError = false;
+    // eslint-disable-next-line
     let errorContainer: any = {};
     try {
       const res = await baseRequest.instance.get(url, { params });
@@ -75,6 +80,7 @@ export const XRequest = {
   ) => {
     options.useLoading ? showLoading() : false;
     let isError = false;
+    // eslint-disable-next-line
     let errorContainer: any = {};
     if (options.contentType === "x-www-form-urlencoded") {
       const uParams = new URLSearchParams();
@@ -111,7 +117,7 @@ const showLoading = (): void => {
 const hideLoading = (): void => {
   XToast.clear();
 };
-
+/* eslint-disable */
 const showError = (error: any): void => {
   const { message, response } = error;
   console.log(response);
@@ -133,4 +139,4 @@ const showError = (error: any): void => {
         }
       };
 };
-// content-type:
+/* eslint-enable */

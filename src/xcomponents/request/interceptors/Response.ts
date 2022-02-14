@@ -1,4 +1,4 @@
-import type { AxiosInstance } from "axios";
+import type { AxiosInstance } from "axios/index";
 
 export const setResponseInterceptor = (instance: AxiosInstance) => {
   instance.interceptors.response.use(
@@ -8,7 +8,7 @@ export const setResponseInterceptor = (instance: AxiosInstance) => {
       }
       return response.data;
     },
-    (error: any) => {
+    (error) => {
       return Promise.reject(error);
     }
   );
