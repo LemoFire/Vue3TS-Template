@@ -1,4 +1,4 @@
-import { extend } from "../../utils";
+import { extend } from "@/utils";
 import { RequestAxios } from "./Axios";
 import { XToast } from "..";
 import {
@@ -6,7 +6,7 @@ import {
   DESC_TIMEOUT,
   DESC_NETWORK_ERROR,
   DESC_OTHER_ERROR,
-} from "../../config/const";
+} from "@/config/Description";
 
 const DESC_LOADING = "请稍候...";
 
@@ -14,7 +14,7 @@ const baseRequest = new RequestAxios();
 type params = {
   [key: string]: any;
 };
-import type { AxiosRequestConfig } from "axios";
+import type { AxiosRequestConfig } from "axios/index";
 type requestContentType = "application/json" | "x-www-form-urlencoded" | string;
 type requestOptions = {
   useLoading?: boolean;
@@ -31,7 +31,7 @@ export const XRequest = {
     options: requestOptions = {}
   ) => {
     options.useLoading ? showLoading() : false;
-    let isError: Boolean = false;
+    let isError = false;
     let errorContainer: any = {};
     try {
       const res = await baseRequest.request(axiosConfig);
@@ -53,7 +53,7 @@ export const XRequest = {
   ) => {
     options = extend(getDefaultOptions(), options);
     options.useLoading ? showLoading() : false;
-    let isError: Boolean = false;
+    let isError = false;
     let errorContainer: any = {};
     try {
       const res = await baseRequest.instance.get(url, { params });
@@ -74,11 +74,11 @@ export const XRequest = {
     options: requestOptions = {}
   ) => {
     options.useLoading ? showLoading() : false;
-    let isError: Boolean = false;
+    let isError = false;
     let errorContainer: any = {};
     if (options.contentType === "x-www-form-urlencoded") {
-      let uParams = new URLSearchParams();
-      for (let key in params) {
+      const uParams = new URLSearchParams();
+      for (const key in params) {
         uParams.append(key, params[key]);
       }
       params = uParams;

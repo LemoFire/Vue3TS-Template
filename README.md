@@ -21,10 +21,6 @@ _main 分支为基本分支，不带任何业务逻辑。业务逻辑可在对�
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [pnpm](https://pnpm.io/)
 
-#### 其他
-
-- import 代码时，使用完整相对路径，不实用`@` ，避免升级/更换脚手架时出现兼容性问题
-
 ## 可参考文档
 
 - [Vue3](https://vuejs.org/)

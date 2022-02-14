@@ -1,4 +1,4 @@
-import type { AxiosInstance } from "axios";
+import type { AxiosInstance } from "axios/index";
 
 export const setRequestInterceptor = (instance: AxiosInstance) => {
   instance.interceptors.request.use(

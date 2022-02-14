@@ -1,9 +1,9 @@
-const TIME_OUT: number = 6000;
+const TIME_OUT = 6000;
 
 import { setRequestInterceptor } from "./interceptors/Request";
 import { setResponseInterceptor } from "./interceptors/Response";
-import axios from "axios";
-import type { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios from "axios/index";
+import type { AxiosInstance, AxiosRequestConfig } from "axios/index";
 import { extend } from "@/utils";
 
 export class RequestAxios {

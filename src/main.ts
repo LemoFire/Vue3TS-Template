@@ -17,10 +17,11 @@ app.mount("#app");
 
 import eruda from "eruda";
 import { version as vueVersion } from "vue/package.json";
+import { OPEN_CONSOLE } from "./config/Base";
 
 IS_DEVELOPMENT
   ? (() => {
-      eruda.init();
+      OPEN_CONSOLE && eruda.init();
       console.log("Vue版本：", vueVersion);
     })()
   : false;
