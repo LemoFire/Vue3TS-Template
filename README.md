@@ -27,6 +27,7 @@ _main 分支为基本分支，不带任何业务逻辑。业务逻辑可在对�
 - [Vite](https://vitejs.dev/)
 - [pinia](https://pinia.vuejs.org)
 - [TypeScript](https://zhuanlan.zhihu.com/p/405982472)
+- [TypeScript ESLint](https://typescript-eslint.io/)
 - [代码风格](https://vuejs.org/style-guide/)
 
 ## 项目安装
@@ -60,7 +61,7 @@ pnpm run build
 pnpm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### 代码检查 [ESLint](https://eslint.org/)
 
 ```sh
 pnpm run lint
