@@ -15,9 +15,8 @@ const baseRequest = new RequestAxios();
 type params = {
   [key: string]: any;
 };
-/* eslint-enable */
 
-import type { AxiosRequestConfig } from "axios/index";
+import type { AxiosRequestConfig } from "axios";
 type requestContentType = "application/json" | "x-www-form-urlencoded" | string;
 type requestOptions = {
   useLoading?: boolean;
@@ -32,7 +31,7 @@ export const XRequest = {
   request: async (
     axiosConfig: AxiosRequestConfig = {},
     options: requestOptions = {}
-  ) => {
+  ): Promise<any> => {
     options.useLoading ? showLoading() : false;
     let isError = false;
     // eslint-disable-next-line
@@ -54,7 +53,7 @@ export const XRequest = {
     url: string,
     params: params = {},
     options: requestOptions = {}
-  ) => {
+  ): Promise<any> => {
     options = extend(getDefaultOptions(), options);
     options.useLoading ? showLoading() : false;
     let isError = false;
@@ -77,7 +76,7 @@ export const XRequest = {
     url: string,
     params: params = {},
     options: requestOptions = {}
-  ) => {
+  ): Promise<any> => {
     options.useLoading ? showLoading() : false;
     let isError = false;
     // eslint-disable-next-line
@@ -105,6 +104,7 @@ export const XRequest = {
     }
   },
 };
+/* eslint-enable */
 
 const showLoading = (): void => {
   XToast.loading({
