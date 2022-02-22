@@ -1,4 +1,4 @@
-const TIME_OUT = 6000;
+const TIME_OUT = 12000;
 
 import { setRequestInterceptor } from "./interceptors/Request";
 import { setResponseInterceptor } from "./interceptors/Response";
@@ -8,8 +8,8 @@ import { extend } from "@/utils";
 
 export class RequestAxios {
   constructor(options: AxiosRequestConfig = {}) {
-    this.instance = axios.create();
     this.defaultConfig = extend(this.defaultConfig, options);
+    this.instance = axios.create(this.defaultConfig);
     this.setInterceptors(this.instance);
   }
 

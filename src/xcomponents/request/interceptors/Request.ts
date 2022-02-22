@@ -1,5 +1,5 @@
 import { extend } from "@/utils";
-import type { AxiosInstance, AxiosRequestConfig } from "axios/index";
+import type { AxiosInstance, AxiosRequestConfig } from "axios";
 
 export const setRequestInterceptor = (instance: AxiosInstance) => {
   instance.interceptors.request.use(

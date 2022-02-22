@@ -17,7 +17,10 @@ type params = {
 };
 
 import type { AxiosRequestConfig } from "axios";
-type requestContentType = "application/json" | "x-www-form-urlencoded" | string;
+type requestContentType =
+  | "application/json"
+  | "application/x-www-form-urlencoded"
+  | string;
 type requestOptions = {
   useLoading?: boolean;
   contentType?: requestContentType;
@@ -81,7 +84,7 @@ export const XRequest = {
     let isError = false;
     // eslint-disable-next-line
     let errorContainer: any = {};
-    if (options.contentType === "x-www-form-urlencoded") {
+    if (options.contentType === "application/x-www-form-urlencoded") {
       const uParams = new URLSearchParams();
       for (const key in params) {
         uParams.append(key, params[key]);

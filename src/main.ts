@@ -19,9 +19,19 @@ import eruda from "eruda";
 import { version as vueVersion } from "vue/package.json";
 import { OPEN_CONSOLE } from "./config/Base";
 
+const initConsole = (): void => {
+  eruda.init();
+};
+
 IS_DEVELOPMENT
   ? (() => {
-      OPEN_CONSOLE && eruda.init();
+      initConsole();
       console.log("Vue版本：", vueVersion);
     })()
-  : false;
+  : (() => {
+      OPEN_CONSOLE
+        ? (() => {
+            initConsole();
+          })()
+        : false;
+    })();
